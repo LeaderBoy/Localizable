@@ -40,19 +40,19 @@ public protocol Localizable {
 }
 
 extension Localizable {
-    var value : String {
+    public var value : String {
         return ""
     }
-    var comment : String {
+    public var comment : String {
         return ""
     }
-    var bundle : Bundle {
+    public var bundle : Bundle {
         return Bundle.main
     }
-    var arguments : [CVarArg] {
+    public var arguments : [CVarArg] {
        return []
     }
-    var tableName : String? {
+    public var tableName : String? {
         return nil
     }
 }
