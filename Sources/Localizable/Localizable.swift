@@ -64,6 +64,30 @@ extension Localizable {
     
     /// Localized string
     public var local : String {
+        let count = arguments.count
+        if count > 0 {
+            if count < 2 {
+                return String(format: defaultLocalizedString,arguments[0])
+            } else if count < 3 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1])
+            } else if count < 4 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2])
+            } else if count < 5 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3])
+            }else if count < 6 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])
+            } else if count < 7 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5])
+            } else if count < 8 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5],arguments[6])
+            } else if count < 9 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5],arguments[6],arguments[7])
+            } else if count < 10 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5],arguments[6],arguments[7],arguments[8])
+            } else if count < 11 {
+                return String(format: defaultLocalizedString,arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5],arguments[6],arguments[7],arguments[8],arguments[9])
+            }
+        }
         return String(format: defaultLocalizedString, arguments)
     }
 }
