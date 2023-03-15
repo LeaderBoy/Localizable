@@ -39,23 +39,6 @@ public protocol Localizable {
     var tableName : String? { get }
 }
 
-extension Localizable {
-    public var value : String {
-        return ""
-    }
-    public var comment : String {
-        return ""
-    }
-    public var bundle : Bundle {
-        return Bundle.main
-    }
-    public var arguments : [CVarArg] {
-       return []
-    }
-    public var tableName : String? {
-        return nil
-    }
-}
 
 extension Localizable {
     fileprivate var defaultLocalizedString : String {
